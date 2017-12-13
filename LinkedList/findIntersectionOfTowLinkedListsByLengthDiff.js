@@ -27,10 +27,10 @@ function findIntersectionByLengthDiff(listA,listB) {
       }
   }else if( l2length > l1length){
       lengthDiff = l2length - l1length;
-      var j = 0;
-      while(j < lengthDiff){
+      var i = 0;
+      while(i < lengthDiff){
         listB = listB.next;
-        j++
+        i++
       }
   }
   
