@@ -19,7 +19,7 @@ function findIntersection(listA,listB) {
       if (!l2) l2 = listA;
   }
     
-  return l1;
+  return l1.val;
 }
 
 
