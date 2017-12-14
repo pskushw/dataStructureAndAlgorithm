@@ -1,22 +1,3 @@
-Skip to content
-This repository
-Search
-Pull requests
-Issues
-Marketplace
-Explore
- @pskushw
- Sign out
- Unwatch 1
-  Star 0  Fork 0 pskushw/dataStructureAndAlgorithm
- Code  Issues 0  Pull requests 0  Projects 0  Wiki  Insights  Settings
-Branch: master Find file Copy pathdataStructureAndAlgorithm/reverseLinkedList.js
-ae0f186  16 seconds ago
-@pskushw pskushw Create reverseLinkedList.js
-1 contributor
-RawBlameHistory     
-58 lines (50 sloc)  927 Bytes
-
 
 function reverseListByIteration(list) {
   if(!list){
