@@ -27,19 +27,16 @@ function reverseListByRecursion(cur,prev){
     cur = next;
     head = reverseListByRecursion(cur,prev);
   }
-  
   if(!cur && prev){
     head = prev
   }
  return head;
-   
 }
 
  function traverse(list) {
   while(list){
     console.log(list.val);
     list = list.next;
-    
   }
 }
 /* Example */
