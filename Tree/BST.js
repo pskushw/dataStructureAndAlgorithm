@@ -39,10 +39,50 @@ BST.prototype.push = function(val) {
   }
 }
 
+BST.prototype.inorderTraverse = function(node) {
+  if(!node) {
+    return;
+  }
+  console.log(node.value);
+  this.inorderTraverse(node.left);
+  this.inorderTraverse(node.right);
+}
 
-var bt = new BST();
-bt.push(10);
-bt.push(2);
-bt.push(1);
-bt.push(20);
-console.log(bt.root.right);
+BST.prototype.preorderTraverse = function(node) {
+  if(!node) {
+    return;
+  }
+  console.log(node.value);
+  this.preorderTraverse(node.left);
+  this.preorderTraverse(node.right);
+}
+
+BST.prototype.postorderTraverse = function(node) {
+  if(!node) {
+    return;
+  }
+ 
+  this.postorderTraverse(node.left);
+  this.postorderTraverse(node.right);
+  console.log(node.value);
+}
+
+var bst = new BST();
+bst.push(25);
+bst.push(15);
+bst.push(50);
+bst.push(10);
+bst.push(22);
+bst.push(35);
+bst.push(70);
+bst.push(4);
+bst.push(12);
+bst.push(18);
+bst.push(24);
+bst.push(31);
+bst.push(44);
+bst.push(66);
+bst.push(90);
+bst.inorderTraverse(bst.root);
+bst.preorderTraverse(bst.root);
+bst.postorderTraverse(bst.root);
