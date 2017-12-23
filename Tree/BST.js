@@ -86,6 +86,19 @@ BST.prototype.maxNode = function(node) {
   return node.value;
 }
 
+BST.prevNode = null;
+BST.prototype.isBSTInorder = function(root) {
+  if (root) {
+	this.isBSTInorder(root.left);
+	if (this.prevNode != null && this.prevNode.value >= root.value) {
+		return false;
+	}
+	this.prevNode = root;
+	this.isBSTInorder(root.right);
+	}
+ return true;
+}
+
 var bst = new BST();
 bst.push(25);
 bst.push(15);
