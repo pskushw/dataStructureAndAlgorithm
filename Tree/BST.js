@@ -43,8 +43,8 @@ BST.prototype.inorderTraverse = function(node) {
   if(!node) {
     return;
   }
-  console.log(node.value);
   this.inorderTraverse(node.left);
+  console.log(node.value);
   this.inorderTraverse(node.right);
 }
 
