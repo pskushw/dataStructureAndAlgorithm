@@ -61,10 +61,29 @@ BST.prototype.postorderTraverse = function(node) {
   if(!node) {
     return;
   }
- 
   this.postorderTraverse(node.left);
   this.postorderTraverse(node.right);
   console.log(node.value);
+}
+
+BST.prototype.minNode = function(node) {
+  if(!node) {
+    return 0;
+  } 
+  if(node.left) {
+    return this.minNode(node.left);
+  }
+  return node.value;
+}
+
+BST.prototype.maxNode = function(node) {
+  if(!node) {
+    return 0;
+  }
+  if(node.right) {
+   return this.maxNode(node.right);
+  }
+  return node.value;
 }
 
 var bst = new BST();
