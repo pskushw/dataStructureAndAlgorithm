@@ -99,6 +99,20 @@ BST.prototype.isBSTInorder = function(root) {
  return true;
 }
 
+BST.prototype.search = function(Node,data) {
+  var currentNode = Node;
+  if(currentNode){
+    if(data == currentNode.value){
+      return "present";
+    }else if( data <= currentNode.value) {
+      return this.search(currentNode.left,data);
+    }else if( data >= currentNode.value) {
+      return this.search(currentNode.right,data);
+    }
+  }
+  return "not Present";
+}
+
 var bst = new BST();
 bst.push(25);
 bst.push(15);
@@ -118,3 +132,4 @@ bst.push(90);
 bst.inorderTraverse(bst.root);
 bst.preorderTraverse(bst.root);
 bst.postorderTraverse(bst.root);
+console.log(bst.search(bst.root,5));
