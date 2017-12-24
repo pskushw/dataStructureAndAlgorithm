@@ -87,6 +87,7 @@ BST.prototype.maxNode = function(node) {
 }
 
 BST.prevNode = null;
+
 BST.prototype.isBSTInorder = function(root) {
   if (root) {
 	this.isBSTInorder(root.left);
@@ -112,6 +113,7 @@ BST.prototype.search = function(Node,data) {
   }
   return "not Present";
 }
+
 BST.prototype.searchIterative = function(node,data) {
   if(!node) {
     return "not present";
@@ -132,6 +134,7 @@ BST.prototype.searchIterative = function(node,data) {
    }
  return "not present";
 }
+
 var bst = new BST();
 bst.push(25);
 bst.push(15);
