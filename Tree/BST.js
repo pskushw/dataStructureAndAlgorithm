@@ -112,7 +112,26 @@ BST.prototype.search = function(Node,data) {
   }
   return "not Present";
 }
-
+BST.prototype.searchIterative = function(node,data) {
+  if(!node) {
+    return "not present";
+  }
+  var queue = [node];
+    while(queue.length) {
+     var n = queue.shift();
+     console.log(n);
+     if(n.value === data) {
+      return "present";
+     }
+      if(n.left) {
+       queue.push(n.left);
+     }
+     if(n.right) {
+       queue.push(n.right);
+     } 
+   }
+ return "not present";
+}
 var bst = new BST();
 bst.push(25);
 bst.push(15);
