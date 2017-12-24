@@ -89,15 +89,15 @@ BST.prototype.maxNode = function(node) {
 BST.prevNode = null;
 
 BST.prototype.isBSTInorder = function(root) {
-  if (root) {
-	this.isBSTInorder(root.left);
-	if (this.prevNode != null && this.prevNode.value >= root.value) {
-		return false;
-	}
-	this.prevNode = root;
-	this.isBSTInorder(root.right);
-	}
- return true;
+ 	if (root) {
+   		this.isBSTInorder(root.left);
+   		if (this.prevNode != null && this.prevNode.value >= root.value) {
+     		return false;
+   		}
+  			this.prevNode = root;
+			this.isBSTInorder(root.right);
+		}
+ 	return true;
 }
 
 BST.prototype.search = function(Node,data) {
