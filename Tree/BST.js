@@ -135,6 +135,22 @@ BST.prototype.searchIterative = function(node,data) {
  return "not present";
 }
 
+BST.prototype.breathFirstSearch = function(node) {
+  if(!node) {
+    return;
+  }
+  var queue = [node];
+  while(queue.length) {
+    var n = queue.shift();
+    console.log(n.value);
+    if(n.left) {
+      queue.push(n.left);
+    }if(n.right) {
+      queue.push(n.right);
+    }
+  }
+}
+
 var bst = new BST();
 bst.push(25);
 bst.push(15);
