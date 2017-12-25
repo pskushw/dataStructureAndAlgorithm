@@ -151,6 +151,20 @@ BST.prototype.breathFirstSearch = function(node) {
   }
 }
 
+BST.prototype.getHeightRecursive = function(node) {
+  if(!node){
+     return 0;
+  }
+  var leftHeight = this.getHeight(node.left);
+  var rightHeight = this.getHeight(node.right);
+  /*if(leftHeight>=rightHeight){
+    return leftHeight+1;
+  }else{
+    return rightHeight+1;
+  }*/ 
+  return 1 + Math.max(leftHeight,rightHeight);
+}
+
 var bst = new BST();
 bst.push(25);
 bst.push(15);
